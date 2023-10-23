@@ -1,0 +1,194 @@
+{
+  "cells": [
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 141
+        },
+        "id": "qA34_3Pz2bgE",
+        "outputId": "6549da61-fe51-4f26-d26d-9ca7babee954"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "Girdiğiniz sayı 5'e ve 7'ye bölünmez.\n"
+          ]
+        }
+      ],
+      "source": [
+        "x = int(input('Lütfen bir sayı giriniz:'))\n",
+        "if (x % 5) == 0 and (x % 7) == 0:\n",
+        "    bolum_5 = x / 5\n",
+        "    bolum_7 = x / 7\n",
+        "    print(\"Girdiğiniz sayı hem 5'e hem de 7'ye bölünmektedir.\")\n",
+        "    print(\"Girdiğiniz sayının 5'e bölümü:\", bolum_5)\n",
+        "    print(\"Girdiğiniz sayının 7'ye bölümü:\", bolum_7)\n",
+        "elif (x % 5) == 0:\n",
+        "    bolum = x / 5\n",
+        "    print(\"Girdiğiniz sayı 5'e bölünmektedir. Girdiğiniz sayının 5'e bölümü:\", bolum)\n",
+        "elif (x % 7) == 0:\n",
+        "    bolum = x / 7\n",
+        "    print(\"Girdiğiniz sayı 7'ye bölünmektedir. Girdiğiniz sayının 7'ye bölümü:\", bolum)\n",
+        "else:\n",
+        "    print(\"Girdiğiniz sayı 5'e ve 7'ye bölünmez.\")\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 4,
+      "metadata": {
+        "id": "MWBM_6yI2dYC"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "Yanlış tahmin\n",
+            "Yanlış tahmin\n",
+            "İyi tahmin\n"
+          ]
+        }
+      ],
+      "source": [
+        "import random\n",
+        "\n",
+        "while (1) :\n",
+        "  i = random.randint(1,9)\n",
+        "  x = int(input(\"Lutfen bir sayı giriniz : \"))\n",
+        "  # print(\"rastgele sayı : \" + str(i))\n",
+        "  if (i == x) :\n",
+        "    print (\"İyi tahmin\")\n",
+        "    break\n",
+        "  print(\"Yanlış tahmin\")"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 5,
+      "metadata": {
+        "id": "PsDBkGDc2hbq"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "İlk harf ve son harf aynı değil.\n"
+          ]
+        }
+      ],
+      "source": [
+        "kelime = (input(\"Lütfen bir kelime giriniz : \"))\n",
+        "\n",
+        "ilk_harf = kelime[0]\n",
+        "son_harf = kelime[-1]\n",
+        "\n",
+        "if ilk_harf == son_harf:\n",
+        "    print(\"İlk harf ve son harf aynı.\")\n",
+        "else:\n",
+        "    print(\"İlk harf ve son harf aynı değil.\")"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 6,
+      "metadata": {
+        "id": "3IS9prBU2k0l"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "Aşırı kilolu\n"
+          ]
+        }
+      ],
+      "source": [
+        "kilo = float(input(\"Lütfen kilonuzu giriniz (kg) : \"))\n",
+        "boy = int(input(\"Lütfen boyunuzu giriniz (cm) : \"))\n",
+        "boy = boy / 100\n",
+        "BMI = kilo / (boy ** 2)\n",
+        "if (BMI >= 30) :\n",
+        "  print ('Obez')\n",
+        "elif (BMI >= 25 and BMI < 30) :\n",
+        "  print ('Aşırı kilolu')\n",
+        "elif (BMI >= 20 and BMI < 25) :\n",
+        "  print ('Normal')\n",
+        "else :\n",
+        "  print ('Zayıf')"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 7,
+      "metadata": {
+        "id": "siwka98d6Mbt"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "Ortalamanız: 83.0\n",
+            "Harf notunuz BA\n"
+          ]
+        }
+      ],
+      "source": [
+        "\n",
+        "x=int(input('Vize notunuzu giriniz:'))\n",
+        "y=int(input('Final notunuzu giriniz:'))\n",
+        "ort=int((x/100)*40)+((y/100)*60)\n",
+        "print(\"Ortalamanız:\",ort)\n",
+        "if ort>90:\n",
+        "  print('Harf notunuz AA')\n",
+        "elif ort>80:\n",
+        " print('Harf notunuz BA')\n",
+        "elif ort>70:\n",
+        " print('Harf notunuz BB')\n",
+        "elif ort>60:\n",
+        " print('Harf notunuz CB')\n",
+        "elif ort>50:\n",
+        " print('Harf notunuz CC')\n",
+        "elif ort>40:\n",
+        " print('Harf notunuz CD')\n",
+        "elif ort>35:\n",
+        " print('Harf notunuz DD')\n",
+        "elif ort>30:\n",
+        " print('Harf notunuz DF')\n",
+        "elif ort<=30:\n",
+        " print('Harf notunuz F')"
+      ]
+    }
+  ],
+  "metadata": {
+    "colab": {
+      "provenance": []
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "name": "python3"
+    },
+    "language_info": {
+      "codemirror_mode": {
+        "name": "ipython",
+        "version": 3
+      },
+      "file_extension": ".py",
+      "mimetype": "text/x-python",
+      "name": "python",
+      "nbconvert_exporter": "python",
+      "pygments_lexer": "ipython3",
+      "version": "3.12.0"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}
