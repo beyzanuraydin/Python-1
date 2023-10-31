@@ -1,0 +1,167 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "code",
+      "execution_count": 9,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "DqbAveLAOlz1",
+        "outputId": "0e06e4c0-94cb-496a-f3c9-eca266f2989b"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Yatırımınızı ikiye katlamak için 5 yıl gerekir.\n"
+          ]
+        }
+      ],
+      "source": [
+        "ana_para = 10000\n",
+        "faiz_orani = 0.15\n",
+        "\n",
+        "yil = 0\n",
+        "while ana_para < 2 * 10000:\n",
+        "    ana_para = ana_para + (ana_para * faiz_orani)\n",
+        "    yil += 1\n",
+        "\n",
+        "print(f\"Yatırımınızı ikiye katlamak için {yil} yıl gerekir.\")\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "mikroorganizma_sayisi = int(input(\"Başlangıçtaki mikroorganizma sayısını girin: \"))\n",
+        "\n",
+        "sure = 0\n",
+        "while mikroorganizma_sayisi <= 1000000:\n",
+        "    mikroorganizma_sayisi *= 2\n",
+        "    sure += 10\n",
+        "\n",
+        "gun = sure // 24\n",
+        "kalan_saat = sure % 24\n",
+        "\n",
+        "print(f\"Popülasyonun 1000000'den fazla olması için geçen süre: {gun} gün, {kalan_saat} saat.\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "UgtUuhp3Wc81",
+        "outputId": "a3708dc8-7bf2-4e02-e176-6bfbdb0cae86"
+      },
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Başlangıçtaki mikroorganizma sayısını girin: 5\n",
+            "Popülasyonun 1000000'den fazla olması için geçen süre: 7 gün, 12 saat.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "toplam = 0\n",
+        "adet = 0\n",
+        "\n",
+        "while True:\n",
+        "    sayi = int(input(\"Bir pozitif tamsayı girin (Negatif bir sayı girerek çıkabilirsiniz): \"))\n",
+        "\n",
+        "    if sayi < 0:\n",
+        "        break\n",
+        "\n",
+        "    toplam += sayi\n",
+        "    adet += 1\n",
+        "\n",
+        "if adet > 0:\n",
+        "    ortalama = toplam / adet\n",
+        "    print(f\"Girilen sayıların ortalaması: {ortalama}\")\n",
+        "else:\n",
+        "    print(\"Hiç pozitif tamsayı girilmedi.\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "0lfE38zfWpe-",
+        "outputId": "22975d31-746c-4021-bd61-d84e75ba0d55"
+      },
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Bir pozitif tamsayı girin (Negatif bir sayı girerek çıkabilirsiniz): 5\n",
+            "Bir pozitif tamsayı girin (Negatif bir sayı girerek çıkabilirsiniz): 4\n",
+            "Bir pozitif tamsayı girin (Negatif bir sayı girerek çıkabilirsiniz): -1\n",
+            "Girilen sayıların ortalaması: 4.5\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import random\n",
+        "\n",
+        "hedef_sayi = random.randint(1, 10)  # 1 ile 10 arasında rastgele bir sayı oluştur\n",
+        "\n",
+        "tahmin_sayisi = 0\n",
+        "\n",
+        "while True:\n",
+        "    tahmin = int(input(\"Bir tahminde bulunun (1 ile 10 arasında bir sayı): \"))\n",
+        "    tahmin_sayisi += 1\n",
+        "\n",
+        "    if tahmin < 1 or tahmin > 10:\n",
+        "        print(\"Geçersiz tahmin! Lütfen 1 ile 10 arasında bir sayı girin.\")\n",
+        "    elif tahmin < hedef_sayi:\n",
+        "        print(\"Daha büyük bir sayı girin.\")\n",
+        "    elif tahmin > hedef_sayi:\n",
+        "        print(\"Daha küçük bir sayı girin.\")\n",
+        "    else:\n",
+        "        print(f\"Tebrikler! {hedef_sayi} sayısını {tahmin_sayisi} tahminde buldunuz.\")\n",
+        "        break\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "re2lGIgdXg7T",
+        "outputId": "fb5a7833-d70b-4c40-aabc-cfcb6e614834"
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Bir tahminde bulunun (1 ile 10 arasında bir sayı): 4\n",
+            "Tebrikler! 4 sayısını 1 tahminde buldunuz.\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
