@@ -1,0 +1,132 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "code",
+      "execution_count": 9,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "qGlAydQpQQI6",
+        "outputId": "563a7dad-3679-4b98-846f-e19c3ad6d73d"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Pozitif bir tam sayı girin: 89\n",
+            "Girdiğiniz sayının rakamlarının toplamı: 17\n"
+          ]
+        }
+      ],
+      "source": [
+        "def rakamlar_toplami(sayi):\n",
+        "    toplam = 0\n",
+        "    while sayi > 0:\n",
+        "        toplam += sayi % 10\n",
+        "        sayi //= 10\n",
+        "    return toplam\n",
+        "\n",
+        "sayi = int(input(\"Pozitif bir tam sayı girin: \"))\n",
+        "\n",
+        "sonuc = rakamlar_toplami(sayi)\n",
+        "\n",
+        "print(f\"Girdiğiniz sayının rakamlarının toplamı: {sonuc}\")"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def sayi_tersi(sayi):\n",
+        "    ters_sayi = 0\n",
+        "    while sayi > 0:\n",
+        "        basamak = sayi % 10\n",
+        "        ters_sayi = (ters_sayi * 10) + basamak\n",
+        "        sayi //= 10\n",
+        "    return ters_sayi\n",
+        "\n",
+        "sayi = int(input(\"Bir sayı girin: \"))\n",
+        "\n",
+        "ters_sayi = sayi_tersi(sayi)\n",
+        "\n",
+        "print(f\"Girdiğiniz sayının tersi: {ters_sayi}\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "v9fm1PxZQYVw",
+        "outputId": "69fc3939-43f5-46bf-d85e-aa3f824eb799"
+      },
+      "execution_count": 11,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Bir sayı girin: 67\n",
+            "Girdiğiniz sayının tersi: 76\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def is_binary(dizge):\n",
+        "    return all(bit == '0' or bit == '1' for bit in dizge)\n",
+        "\n",
+        "def convert_to_decimal(ikili_dizge):\n",
+        "    # is_binary fonksiyonunu kullanarak gelen ikili dizgenin geçerli olup olmadığını kontrol ettim\n",
+        "    if is_binary(ikili_dizge):\n",
+        "        # İkili sayıyı ondalık eşdeğerine dönüştürdüm\n",
+        "        ondalik_deger = int(ikili_dizge, 2)\n",
+        "        return ondalik_deger\n",
+        "    else:\n",
+        "        return \"Geçersiz ikili dizge. Lütfen sadece 0 ve 1 içeren bir dize girin.\"\n",
+        "\n",
+        "# Kullanıcıdan bir ikili dizge girişi alınır\n",
+        "ikili_dizge = input(\"Bir ikili dizge girin: \")\n",
+        "\n",
+        "# Convert_to_decimal fonksiyonunu kullanarak ikili dizgeyi ondalık eşdeğerine dönüştürdüm\n",
+        "sonuc = convert_to_decimal(ikili_dizge)\n",
+        "\n",
+        "# Sonucu ekrana yazdırdım\n",
+        "print(f\"Ondalık eşdeğer: {sonuc}\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "MyAkhNQQRZ4Y",
+        "outputId": "dc9f4242-cc96-47a8-9e04-539e625e4dad"
+      },
+      "execution_count": 12,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Bir ikili dizge girin: 25\n",
+            "Ondalık eşdeğer: Geçersiz ikili dizge. Lütfen sadece 0 ve 1 içeren bir dize girin.\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
